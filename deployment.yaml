@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: aninaka
+  name: aninaka-anime-api
+  labels:
+    app: aninaka-anime-api
+spec:
+  selector:
+    matchLabels:
+      app: aninaka-anime-api
+  template:
+    metadata:
+      labels:
+        app: aninaka-anime-api
+    spec:
+      containers:
+        - image: asia.gcr.io/aninaka-363507/aninaka-anime-api:latest
+          name: aninaka-anime-api
+          ports:
+            - containerPort: 8082
+              protocol: TCP
