@@ -15,7 +15,7 @@ spec:
         app: aninaka-anime-api
     spec:
       containers:
-        - image: asia.gcr.io/aninaka-363507/aninaka-anime-api:latest
+        - image: asia.gcr.io/aninaka-363507/aninaka-anime-api:production-9cae023
           name: aninaka-anime-api
           ports:
             - containerPort: 8082
